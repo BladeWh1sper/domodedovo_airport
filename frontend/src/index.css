@@ -1,0 +1,193 @@
+@import 'tailwindcss';
+
+:root {
+  --page-bg: #0a0f15;
+  --surface-bg: #ffffff;
+  --parking-bg: #f7f8fa;
+
+  --hero-fallback: #000000;
+  --hero-overlay: rgba(0, 0, 0, 0.25);
+  --hero-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.12) 35%, rgba(0, 0, 0, 0.38) 100%);
+  --hero-text: #ffffff;
+  --hero-subtext: rgba(255, 255, 255, 0.9);
+  --hero-primary-bg: #000000;
+  --hero-primary-text: #ffffff;
+  --hero-primary-shadow: rgba(0, 0, 0, 0.24);
+  --hero-secondary-bg: rgba(255, 255, 255, 0.05);
+  --hero-secondary-border: rgba(255, 255, 255, 0.35);
+  --hero-secondary-hover: rgba(255, 255, 255, 0.1);
+  --hero-toggle-bg: rgba(255, 255, 255, 0.08);
+  --hero-toggle-border: rgba(255, 255, 255, 0.35);
+  --hero-nav-active-bg-rgb: 255, 255, 255;
+  --hero-nav-border-rgb: 255, 255, 255;
+
+  --slider-title: #000000;
+  --slider-subtitle: rgba(0, 0, 0, 0.6);
+  --slider-thumb-active: #000000;
+  --slider-thumb-border: rgba(0, 0, 0, 0.1);
+
+  --section-heading: #000000;
+  --section-subtitle: rgba(0, 0, 0, 0.6);
+  --section-heading-dark: #ffffff;
+  --section-subtitle-dark: rgba(255, 255, 255, 0.7);
+
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.1);
+  --card-text: #000000;
+  --card-description: rgba(0, 0, 0, 0.65);
+  --card-pill-bg: rgba(0, 0, 0, 0.05);
+  --card-pill-text: rgba(0, 0, 0, 0.7);
+
+  --flight-bg: #0c1118;
+  --flight-text: #ffffff;
+  --flight-panel-bg: rgba(255, 255, 255, 0.04);
+  --flight-panel-border: rgba(255, 255, 255, 0.1);
+  --flight-tab-active-bg: #ffffff;
+  --flight-tab-active-text: #000000;
+  --flight-tab-bg: rgba(255, 255, 255, 0.05);
+  --flight-tab-text: rgba(255, 255, 255, 0.75);
+  --flight-tab-hover-bg: rgba(255, 255, 255, 0.1);
+  --flight-input-bg: rgba(255, 255, 255, 0.05);
+  --flight-input-border: rgba(255, 255, 255, 0.1);
+  --flight-placeholder: rgba(255, 255, 255, 0.35);
+  --flight-meta: rgba(255, 255, 255, 0.55);
+  --flight-table-frame: rgba(255, 255, 255, 0.1);
+  --flight-table-bg: #ffffff;
+  --flight-table-text: #000000;
+  --flight-table-head-bg: rgba(0, 0, 0, 0.03);
+  --flight-table-head-border: rgba(0, 0, 0, 0.1);
+  --flight-table-head-text: rgba(0, 0, 0, 0.6);
+  --flight-row-border: rgba(0, 0, 0, 0.08);
+  --flight-table-muted: rgba(0, 0, 0, 0.7);
+  --flight-empty: rgba(0, 0, 0, 0.55);
+  --flight-source: rgba(255, 255, 255, 0.45);
+
+  --news-heading: #000000;
+  --news-title: #000000;
+  --news-date: rgba(0, 0, 0, 0.5);
+  --news-divider: rgba(0, 0, 0, 0.1);
+
+  --menu-border: rgba(0, 0, 0, 0.1);
+  --menu-border-hover: rgba(0, 0, 0, 0.2);
+  --menu-text: #000000;
+  --menu-ext: rgba(0, 0, 0, 0.5);
+  --menu-arrow: #000000;
+
+  --footer-bg: #0a0f15;
+  --footer-text: #ffffff;
+  --footer-subtext: rgba(255, 255, 255, 0.65);
+  --footer-muted: rgba(255, 255, 255, 0.45);
+  --footer-link: rgba(255, 255, 255, 0.85);
+  --footer-border: rgba(255, 255, 255, 0.1);
+
+  --status-neutral-bg: rgba(0, 0, 0, 0.05);
+  --status-neutral-text: rgba(0, 0, 0, 0.65);
+  --status-neutral-border: rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme='dark'] {
+  --page-bg: #06090d;
+  --surface-bg: #121820;
+  --parking-bg: #111821;
+
+  --hero-fallback: #000000;
+  --hero-overlay: rgba(0, 0, 0, 0.45);
+  --hero-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.6) 100%);
+  --hero-text: #f5f7fb;
+  --hero-subtext: rgba(245, 247, 251, 0.88);
+  --hero-primary-bg: #e9eef7;
+  --hero-primary-text: #0b1320;
+  --hero-primary-shadow: rgba(0, 0, 0, 0.34);
+  --hero-secondary-bg: rgba(17, 24, 33, 0.55);
+  --hero-secondary-border: rgba(225, 235, 255, 0.35);
+  --hero-secondary-hover: rgba(225, 235, 255, 0.18);
+  --hero-toggle-bg: rgba(17, 24, 33, 0.55);
+  --hero-toggle-border: rgba(225, 235, 255, 0.4);
+  --hero-nav-active-bg-rgb: 225, 235, 255;
+  --hero-nav-border-rgb: 225, 235, 255;
+
+  --slider-title: #f3f6fb;
+  --slider-subtitle: rgba(227, 236, 247, 0.72);
+  --slider-thumb-active: #f3f6fb;
+  --slider-thumb-border: rgba(227, 236, 247, 0.35);
+
+  --section-heading: #f3f6fb;
+  --section-subtitle: rgba(227, 236, 247, 0.72);
+  --section-heading-dark: #f3f6fb;
+  --section-subtitle-dark: rgba(227, 236, 247, 0.72);
+
+  --card-bg: #151c25;
+  --card-border: rgba(227, 236, 247, 0.16);
+  --card-text: #f3f6fb;
+  --card-description: rgba(227, 236, 247, 0.72);
+  --card-pill-bg: rgba(227, 236, 247, 0.1);
+  --card-pill-text: rgba(227, 236, 247, 0.82);
+
+  --flight-bg: #0b1118;
+  --flight-text: #f5f7fb;
+  --flight-panel-bg: rgba(227, 236, 247, 0.08);
+  --flight-panel-border: rgba(227, 236, 247, 0.2);
+  --flight-tab-active-bg: #f3f6fb;
+  --flight-tab-active-text: #0b1320;
+  --flight-tab-bg: rgba(227, 236, 247, 0.08);
+  --flight-tab-text: rgba(227, 236, 247, 0.82);
+  --flight-tab-hover-bg: rgba(227, 236, 247, 0.16);
+  --flight-input-bg: rgba(227, 236, 247, 0.08);
+  --flight-input-border: rgba(227, 236, 247, 0.22);
+  --flight-placeholder: rgba(227, 236, 247, 0.45);
+  --flight-meta: rgba(227, 236, 247, 0.68);
+  --flight-table-frame: rgba(227, 236, 247, 0.22);
+  --flight-table-bg: #151c25;
+  --flight-table-text: #f3f6fb;
+  --flight-table-head-bg: rgba(227, 236, 247, 0.06);
+  --flight-table-head-border: rgba(227, 236, 247, 0.16);
+  --flight-table-head-text: rgba(227, 236, 247, 0.75);
+  --flight-row-border: rgba(227, 236, 247, 0.12);
+  --flight-table-muted: rgba(227, 236, 247, 0.75);
+  --flight-empty: rgba(227, 236, 247, 0.65);
+  --flight-source: rgba(227, 236, 247, 0.58);
+
+  --news-heading: #f3f6fb;
+  --news-title: #f3f6fb;
+  --news-date: rgba(227, 236, 247, 0.58);
+  --news-divider: rgba(227, 236, 247, 0.16);
+
+  --menu-border: rgba(227, 236, 247, 0.18);
+  --menu-border-hover: rgba(227, 236, 247, 0.32);
+  --menu-text: #f3f6fb;
+  --menu-ext: rgba(227, 236, 247, 0.64);
+  --menu-arrow: #f3f6fb;
+
+  --footer-bg: #050a0f;
+  --footer-text: #f5f7fb;
+  --footer-subtext: rgba(227, 236, 247, 0.72);
+  --footer-muted: rgba(227, 236, 247, 0.58);
+  --footer-link: rgba(227, 236, 247, 0.9);
+  --footer-border: rgba(227, 236, 247, 0.18);
+
+  --status-neutral-bg: rgba(227, 236, 247, 0.1);
+  --status-neutral-text: rgba(227, 236, 247, 0.8);
+  --status-neutral-border: rgba(227, 236, 247, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--hero-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
