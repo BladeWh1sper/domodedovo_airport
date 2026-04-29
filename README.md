@@ -335,51 +335,6 @@ frontend/dist
 npm run preview
 ```
 
-## Деплой
-
-### Backend на Railway
-
-1. Создайте новый проект в Railway.
-2. Подключите репозиторий.
-3. В настройках проекта укажите `backend` как Root Directory.
-4. Добавьте переменные окружения:
-
-```env
-YANDEX_API_KEY=your_yandex_api_key
-YANDEX_STATION=DME
-YANDEX_API_BASE=https://api.rasp.yandex.net/v3.0
-FRONTEND_ORIGIN=https://your-frontend-domain.com
-```
-
-5. Для запуска используется команда:
-
-```bash
-npm start
-```
-
-6. После деплоя backend получите публичный URL и укажите его во frontend:
-
-```env
-VITE_API_BASE=https://your-backend-domain.com/api
-```
-
-### Frontend
-
-Frontend можно разместить на Vercel, Netlify или любом другом сервисе для статических сайтов.
-
-Общие настройки:
-
-```text
-Root Directory: frontend
-Build Command: npm run build
-Output Directory: dist
-```
-
-В переменных окружения frontend укажите:
-
-```env
-VITE_API_BASE=https://your-backend-domain.com/api
-```
 
 ## Примечания
 

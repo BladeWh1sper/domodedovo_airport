@@ -1,0 +1,12 @@
+{
+  "name": "domodedovo-airport-railway",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd backend && npm ci",
+    "start": "sh ./start.sh"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
